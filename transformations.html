@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformações 2D WebGL</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <header class="bg-gray-600 p-4 text-white text-center font-semibold">
+        <h1 class="text-3xl mb-3">Transformações 2D WebGL</h1>
+        <h2 class="text-xl">Atividade 2</h2>
+        <h3 class="text-lg">Profª. Dra. Ana Luísa</h3>
+        <h3 class="text-lg">Matheus de S. M. da Silva, RA 140317</h3>
+    </header>
+
+    <div class="text-lg font-semibold text-center mt-6">
+        Uma flor cujas pétalas giram em torno de seu miolo.
+    </div>
+    <div class="flex justify-center mt-4">
+        <div class="canvas-container">
+            <canvas id="flower" width="600" height="600" class="border border-4 border-gray-600"></canvas>
+            <div class="flex justify-center items-center mt-2">
+                <label for="flowerCheckbox" class="font-semibold mr-2">Rotacionar Flor</label>
+                <input type="checkbox" id="flowerCheckbox">
+            </div>
+        </div>
+    </div>
+    
+    <div class="w-4/5 h-[2px] bg-black mx-auto my-4"></div>
+
+    <div class="text-lg font-semibold text-center mt-6">
+        Um carro que se movimenta para frente e para trás. As
+        rodas do carro devem girar de forma coerente com o
+        movimento do carro.
+    </div>
+    <div class="flex justify-center mt-4">
+        <div class="canvas-container">
+            <canvas id="car" width="600" height="600" class="border border-4 border-gray-600"></canvas>
+            <div class="flex justify-center items-center mt-2 gap-8">
+                <div>
+                    <label for="carCheckbox" class="font-semibold mr-2">Ligar Carro</label>
+                    <input type="checkbox" id="carCheckbox">
+                </div>
+                <div>
+                    <label for="carDirection" class="font-semibold ml-2">Direção</label>
+                    <select id="carDirection" class="ml-2 font-semibold border-2">
+                        <option value="1">Direita</option>
+                        <option value="0">Esquerda</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-4/5 h-[2px] bg-black mx-auto my-4"></div>
+
+    <div class="text-lg font-semibold text-center mt-6">
+        Um robô que mexe os braços e as pernas.
+    </div>
+    <span class="flex justify-center text-center font-semibold">
+        Para mexer o robô, use as teclas A e D ou as setas do teclado.
+    </span>
+    <div class="flex justify-center my-4">
+        <div class="canvas-container">
+            <canvas id="robot" width="600" height="600" class="border border-4 border-gray-600"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
